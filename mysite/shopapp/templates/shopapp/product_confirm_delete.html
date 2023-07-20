@@ -1,0 +1,23 @@
+{% extends 'shopapp/base.html' %}
+
+{% block title %}
+  Confirm archive {{ object.name }}
+{% endblock %}
+
+{% block body %}
+<div class="container p-5">
+  <h1>Are you sure you want to archive {{ object.name }}?</h1>
+  <br>
+  <div class="container pt-3">
+    <a href="{% url 'shopapp:product_details' pk=object.pk %}" class="btn btn-success btn-lg">Back to product</a>
+  </div>
+  <br>
+  <div>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-primary btn-lg">Archive</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

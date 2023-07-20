@@ -1,0 +1,15 @@
+name,description,price,discount
+Laptop,Lorem ipsum dolor sit amet,1999.00,10
+Desktop,"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",2999.00,25
+Smartphone,,987.00,10
+Laptop (new),,900.00,5
+Tablet,Great tablet,1234.00,0
+phone2,this is a great phone,12345.00,0
+Tablet 2,a new tablet,321.00,15
+Desktop 3,,0.00,0
+Phone 2,a new phone,1234.00,10
+Smartphone 1,,199.00,10
+Smartphone 2,,299.00,10
+Smartphone 3,,399.00,10
+Laptop 14,A new one,2299.00,5
+Laptop 16,A bigger one,2699.00,7

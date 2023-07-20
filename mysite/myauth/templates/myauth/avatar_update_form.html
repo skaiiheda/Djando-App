@@ -1,0 +1,18 @@
+{% extends 'myauth/base.html' %}
+
+{% block title %}
+  Update avatar
+{% endblock %}
+
+{% block body %}
+<div class="container p-5">
+  <h1>Update avatar</h1>
+  <div class="p-3">
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-primary btn-lg">Update</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

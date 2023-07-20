@@ -1,0 +1,38 @@
+{% extends 'myauth/base.html' %}
+{% load cache %}
+
+{% block title %}
+    User orders
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h1>Orders</h1>
+        {% if user.is_authenticated %}
+            {% if user_orders %}
+                <h2>User {{ user.username }} made the following orders:</h2>
+                {% cache 300 userorders owner.id %}
+                {% for order in user_orders %}
+                <p>Order #{{ order.id }}</p>
+                <p>Delivery address: {{ order.delivery_address }}</p>
+                <p>Promocode: {{ order.promocode }}</p>
+                <p>Products:</p>
+                <ul>
+                    {% for product in order.products.all%}
+                        <li>
+                            <p>{{ product.name }}</p>
+                        </li>
+                    {% endfor %}
+                </ul>
+            <br>
+            {% endfor %}
+            {% endcache %}
+            {% else %}
+                <h2>User {{ user.username }} has no orders yet</h2>
+            {% endif %}
+    {% else %}
+        <h2>User is anonymous</h2>
+    {% endif %}
+
+    </div>
+{% endblock %}

@@ -1,0 +1,139 @@
+[
+  {
+    "model": "shopapp.product",
+    "pk": 1,
+    "fields": {
+      "name": "Laptop",
+      "description": "Lorem ipsum dolor sit amet",
+      "price": "1999.00",
+      "discount": 10,
+      "created_at": "2023-06-12T11:18:52.668Z",
+      "archived": false
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 2,
+    "fields": {
+      "name": "Desktop",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "price": "2999.00",
+      "discount": 25,
+      "created_at": "2023-06-12T11:18:52.709Z",
+      "archived": false
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 3,
+    "fields": {
+      "name": "Smartphone",
+      "description": "",
+      "price": "987.00",
+      "discount": 0,
+      "created_at": "2023-06-12T11:18:52.736Z",
+      "archived": false
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 5,
+    "fields": {
+      "name": "Laptop (new)",
+      "description": "",
+      "price": "900.00",
+      "discount": 5,
+      "created_at": "2023-06-12T12:15:38.388Z",
+      "archived": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 6,
+    "fields": {
+      "name": "Tablet",
+      "description": "Great tablet",
+      "price": "1234.00",
+      "discount": 0,
+      "created_at": "2023-06-15T13:17:11.635Z",
+      "archived": false
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 7,
+    "fields": {
+      "name": "phone2",
+      "description": "this is a great phone",
+      "price": "12345.00",
+      "discount": 0,
+      "created_at": "2023-06-15T15:58:31.722Z",
+      "archived": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 8,
+    "fields": {
+      "name": "Tablet 2",
+      "description": "a new tablet",
+      "price": "321.00",
+      "discount": 15,
+      "created_at": "2023-06-15T16:21:55.599Z",
+      "archived": false
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 9,
+    "fields": {
+      "name": "Desktop 3",
+      "description": "",
+      "price": "0.00",
+      "discount": 0,
+      "created_at": "2023-06-16T12:03:24.777Z",
+      "archived": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 10,
+    "fields": {
+      "name": "Phone 2",
+      "description": "a new phone",
+      "price": "1234.00",
+      "discount": 10,
+      "created_at": "2023-06-17T20:46:21.880Z",
+      "archived": false
+    }
+  },
+  {
+    "model": "shopapp.order",
+    "pk": 1,
+    "fields": {
+      "delivery_address": "ul Drujbi, d 15",
+      "promocode": "ispanci",
+      "created_at": "2023-06-12T11:19:28.844Z",
+      "user": 1,
+      "products": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "model": "shopapp.order",
+    "pk": 3,
+    "fields": {
+      "delivery_address": "ul Matrosova 50",
+      "promocode": "LETO123",
+      "created_at": "2023-06-16T12:02:06.365Z",
+      "user": 1,
+      "products": [
+        2,
+        3
+      ]
+    }
+  }
+]

@@ -1,0 +1,49 @@
+{% extends 'shopapp/base.html' %}
+{% load i18n %}
+{% block title %}
+    {% translate 'Products list' %}
+{% endblock %}
+
+{% block body %}
+<div class="container p-5">
+<h1>{% translate 'Products' %}:</h1>
+{%if products %}
+<p class="container pt-3">
+    {% blocktranslate count products_count=products|length %}
+        There is only one product
+        {% plural %}
+        There are {{ products_count }} products.
+    {% endblocktranslate %}
+</p>
+<div class="container">
+    {% for product in products %}
+    <div>
+        <p>{% translate 'Name' context 'product name' %}: <a href="{% url 'shopapp:product_details' pk=product.pk %}"
+        > {{product.name}}</a></p>
+        <p>{% translate 'Price' %}: {{product.price}}</p>
+        {% translate 'no discount' as no_discount %}
+        <p>{% translate 'Discount' %}: {% firstof product.discount no_discount %}</p>
+        {% if product.preview %}
+        <p>
+            <img src="{{ product.preview.url }}" alt="{{ product.preview.name }}">
+        </p>
+        {% endif %}
+        <br>
+    </div>
+    {% endfor %}
+</div>
+
+<div>
+    <a href="{% url 'shopapp:product_create' %}" class="btn btn-primary btn-lg">
+        {% translate 'Create a new product' %}</a>
+</div>
+
+{% else %}
+{% url 'shopapp:product_create' as create_product_url %}
+{% blocktranslate %}
+<h3>No products yet</h3>
+    <a href="{{ create_product_url }}" class="btn btn-primary btn-lg">Create a new one</a>
+{% endblocktranslate %}
+{% endif %}
+</div>
+{% endblock %}
