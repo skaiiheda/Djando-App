@@ -102,7 +102,6 @@ class ProductViewSet(ModelViewSet):
         serializer = self.get_serializer(products, many=True)
         return Response(serializer.data)
 
-
     @extend_schema(summary="Get one product by ID",
                    description="Retrieves **product**, returns 404 if not fount",
                    responses={
