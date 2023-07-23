@@ -168,7 +168,7 @@ class ProductCreateView(UserPassesTestMixin, CreateView):
 
     model = Product
     fields = "name", "price", "description", "discount", "preview"
-    success_url = reverse_lazy("products_list")
+    success_url = reverse_lazy("shopapp:products_list")
 
 
 class ProductUpdateView(UpdateView):
@@ -192,7 +192,7 @@ class ProductUpdateView(UpdateView):
 
 class ProductDeleteView(DeleteView):
     model = Product
-    success_url = reverse_lazy('products_list')
+    success_url = reverse_lazy('shopapp:products_list')
 
     def form_valid(self, form):
         success_url = self.get_success_url()

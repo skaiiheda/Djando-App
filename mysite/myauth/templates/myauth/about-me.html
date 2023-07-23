@@ -9,9 +9,6 @@
 {% block body %}
 <div class="container">
   <h1>User info</h1>
-  <div>
-    Products available: {% now 'u' %}
-  </div>
   {% if user.is_authenticated %}
   {% cache 300 userinfo user.username %}
   <div class="container">
