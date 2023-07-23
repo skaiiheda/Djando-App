@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Article</h1>
-    <div>
+    <h1 class="container p-4">Article</h1>
+    <div class="container p-2">
         <p>Article: {{ article.title }}</p>
         <p>By {{ article.author.name }}</p>
         <p>Date of publication: {{ article.pub_date }}</p>
@@ -20,7 +20,7 @@
         </p>
         <p>Content: {{ article.content }}</p>
     </div>
-    <div>
-        <a href="{% url 'blogapp:articles' %}">Back to articles list</a>
+    <div class="container p-3">
+        <a href="{% url 'blogapp:articles' %}" class="btn btn-success btn-lg">Back to articles list</a>
     </div>
 {% endblock %}

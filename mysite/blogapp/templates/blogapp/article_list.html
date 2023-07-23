@@ -5,10 +5,10 @@
 {% endblock %}
 
 {% block body%}
-    <h1>Articles</h1>
+    <h1 class="container p-4">Articles</h1>
     {% if articles %}
         {% for article in articles %}
-            <div>
+            <div class="container p-3">
                 <p>Article: <a href="{% url 'blogapp:article' pk=article.pk %}">{{ article.title }}</a></p>
                 <p>By {{ article.author.name }}</p>
                 <p>Date of publication: {{ article.pub_date }}</p>
@@ -22,8 +22,9 @@
                     </ul>
                 </p>
             </div>
+        <br>
         {% endfor %}
     {% else %}
-        <h3>No published articles yet</h3>
+        <h3 class="container p-5">No published articles yet</h3>
     {% endif %}
 {% endblock %}

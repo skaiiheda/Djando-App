@@ -7,13 +7,13 @@
 
 
 {% block body %}
-<div class="container">
+<div class="container p-3">
   <h1>User info</h1>
   {% if user.is_authenticated %}
   {% cache 300 userinfo user.username %}
-  <div class="container">
+  <div class="container p-3">
     <h2>Detail</h2>
-    <div class="container">
+    <div class="container p-2">
       <p>Username: {{ user.username }}</p>
       <p>First name: {{ user.first_name }}</p>
       <p>Last name: {{ user.last_name }}</p>
@@ -22,7 +22,7 @@
       {% if user.profile.avatar %}
         <img src="{{ user.profile.avatar.url }}" alt="{{ user.profile.avatar.name }}">
       {% else %}
-      <h3>No user avatar yet</h3>
+      <h5>No user avatar yet</h5>
       {% endif %}
     </div>
     <form method="post" enctype="multipart/form-data">
